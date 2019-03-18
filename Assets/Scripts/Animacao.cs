@@ -14,8 +14,9 @@ public class Animacao : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        float HorizontalInput = Input.GetAxisRaw("Horizontal");
         float So = transform.position.x;
-        float S = So + MoveSpeed * Time.deltaTime;
+        float S = So + HorizontalInput * MoveSpeed * Time.deltaTime;
         transform.position = new Vector3(S, transform.position.y, transform.position.z);
     }
 }

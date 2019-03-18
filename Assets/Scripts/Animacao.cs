@@ -4,15 +4,18 @@ using UnityEngine;
 
 public class Animacao : MonoBehaviour
 {
+    [SerializeField]
+    private float MoveSpeed = 1f;
     // Start is called before the first frame update
     void Start()
     {
-        
     }
 
     // Update is called once per frame
     void Update()
     {
-        transform.position = new Vector3(transform.position.x + 0.1f, transform.position.y, transform.position.z);
+        float So = transform.position.x;
+        float S = So + MoveSpeed * Time.deltaTime;
+        transform.position = new Vector3(S, transform.position.y, transform.position.z);
     }
 }

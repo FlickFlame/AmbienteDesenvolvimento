@@ -16,8 +16,8 @@ public class MoveByRigidBody : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float HorizontalInput = Input.GetAxis("Horizontal"); 
-        float VerticalInput = Input.GetAxis("Vertical");        
+        float HorizontalInput = Input.GetAxisRaw("Horizontal"); 
+        float VerticalInput = Input.GetAxisRaw("Vertical");        
 
         RB.velocity = new Vector3(HorizontalInput,VerticalInput,0f) * SpeedFactor;  
     }

@@ -9,6 +9,7 @@ public class SceneManage : MonoBehaviour
     private Vector3 TapeSpeed = new Vector3(-2f,0f,0f);
     [SerializeField]
     private Transform Tape = null;
+    public UIComponents uiComponents;
 
     void Awake(){
         Assert.IsNotNull(Tape);

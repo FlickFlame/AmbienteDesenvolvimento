@@ -22,4 +22,9 @@ public class AudioManager : MonoBehaviour
     {
         AudioSource.PlayClipAtPoint(audiosfx.fail, obj.transform.position);
     }
+
+    public void PlaySoundLevelComplete(GameObject obj)
+    {
+        AudioSource.PlayClipAtPoint(audiosfx.levelComplete, obj.transform.position);
+    }
 }

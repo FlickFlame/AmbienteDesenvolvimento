@@ -25,6 +25,7 @@ public class PlayerControl : MonoBehaviour
             LevelManager.instance.SetTapeSpeed(0);
             AudioManager.instance.PlaySoundFail(gameObject);
             Destroy(gameObject);
+            SFXManager.instance.ShowDieParticles(gameObject);
         }
     }
 }

@@ -75,6 +75,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4204190517503571136}
   - component: {fileID: 4204190517503571167}
+  - component: {fileID: 247364704186889384}
   m_Layer: 0
   m_Name: GhostMoving
   m_TagString: Untagged
@@ -118,6 +119,31 @@ MonoBehaviour:
   pos2: {fileID: 4204190516610746061}
   waitTime: 0.5
   speed: 2
+--- !u!114 &247364704186889384
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4204190517503571137}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cff0a73a71c7b1a41b4fb12db27afc45, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefab: {fileID: 1087173043050998897, guid: 41c737c227c7eb14d9fa6c70c328811b, type: 3}
+  spawnPoint: {fileID: 1487216123086055395}
+  waitTime: 1
+  projectileSpeed: 8
+  directions:
+  - {x: -1, y: 0, z: 0}
+  - {x: -0.7, y: -0.7, z: 0}
+  - {x: 0, y: 1, z: 0}
+  - {x: 0.7, y: 0.7, z: 0}
+  - {x: 1, y: 0, z: 0}
+  - {x: 0.7, y: -0.7, z: 0}
+  - {x: 0, y: -1, z: 0}
+  - {x: -0.7, y: -0.7, z: 0}
 --- !u!1001 &4204190517434228022
 PrefabInstance:
   m_ObjectHideFlags: 0

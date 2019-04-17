@@ -14,18 +14,30 @@ public class PlayerControl : MonoBehaviour
     // Update is called once per frame
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.CompareTag("Coin")) {
+        if (other.gameObject.CompareTag("Coin"))
+        {
             SFXManager.instance.ShowCoinParticle(other.gameObject);
             AudioManager.instance.PlaySoundCoinPickup(other.gameObject);
             Destroy(other.gameObject);
             LevelManager.instance.IncrementCoinCount();
         }
-        else if (other.gameObject.layer == LayerMask.NameToLayer("Default")){
-            Camera.main.GetComponentInChildren<AudioSource>().mute = true;
-            LevelManager.instance.SetTapeSpeed(0);
-            AudioManager.instance.PlaySoundFail(gameObject);
-            Destroy(gameObject);
-            SFXManager.instance.ShowDieParticles(gameObject);
+        else if (other.gameObject.layer == LayerMask.NameToLayer("Default"))
+        {
+            KillPlayer();
         }
+        else if (other.gameObject.layer == LayerMask.NameToLayer("Area"))
+        {
+            KillPlayer();
+        }
+
+    }
+
+    void KillPlayer()
+    {
+        Camera.main.GetComponentInChildren<AudioSource>().mute = true;
+        LevelManager.instance.SetTapeSpeed(0);
+        AudioManager.instance.PlaySoundFail(gameObject);
+        Destroy(gameObject);
+        SFXManager.instance.ShowDieParticles(gameObject);
     }
 }

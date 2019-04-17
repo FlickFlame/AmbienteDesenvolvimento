@@ -49,6 +49,7 @@ public class PlayerControl : MonoBehaviour
 
     void KillPlayer()
     {
+        LevelManager.instance.ShowGameOverPanel();
         StopMusicTape();
         AudioManager.instance.PlaySoundFail(gameObject);
         Destroy(gameObject);
